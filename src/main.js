@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { Button } from 'vant'
-Vue.use(Button)
+import { Button,Row, Col } from 'vant'
+import '@/styles/common.scss' // global css
+
+Vue.use(Button).use(Row).use(Col)
 
 Vue.config.productionTip = false
 
