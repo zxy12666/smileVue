@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import { Button,Row, Col } from 'vant'
 import '@/styles/common.scss' // global css
-
+import '@/assets/iconfont' // icon
 Vue.use(Button).use(Row).use(Col)
 
 Vue.config.productionTip = false
