@@ -15,6 +15,11 @@
         </van-col>
       </van-row>
     </div>
+    <div class="swiper-area">
+      <van-swipe :autoplay="3000">
+        <van-swipe-item v-for="(item,index) in bannerPicArray" :key="index"><img  v-lazy="item.imageUrl" style="width: 100%"  alt=""></van-swipe-item>
+      </van-swipe>
+    </div>
   </div>
 </template>
 
@@ -23,8 +28,30 @@
     name: 'HelloWorld',
     data () {
       return {
-        msg: 'shoppingMall'
+        msg: 'shoppingMall',
+        category:[],
+        bannerPicArray:[
+          {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic001.jpg'},
+          {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic002.jpg'},
+          {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic003.jpg'},
+        ]
       }
+    },
+    methods:{
+      getData(){
+        this.$ajax({
+          method: 'get',
+          url: 'index',
+        }).then(function (resp) {
+          console.log(resp)
+          if(resp.status==200){
+            this.category=resp.data.data.category;
+          }
+        }.bind(this));
+      }
+    },
+    created(){
+      this.getData()
     }
   }
 </script>
