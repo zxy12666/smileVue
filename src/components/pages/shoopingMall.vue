@@ -41,7 +41,7 @@
       getData(){
         this.$ajax({
           method: 'get',
-          url: 'index',
+          url: '/index',
         }).then(function (resp) {
           console.log(resp)
           if(resp.status==200){

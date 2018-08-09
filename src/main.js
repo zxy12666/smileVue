@@ -12,7 +12,7 @@ Vue.use(Button).use(Row).use(Col).use(Swipe).use(SwipeItem).use(Lazyload);;
 Vue.config.productionTip = false
 var instance = axios.create({
   // baseURL:  'http://139.196.192.241:10133/',
-  baseURL:  'https://www.easy-mock.com/mock/5b4dca4d1aa15d0bd62fa882/SmileVue/',
+  baseURL:  'https://dsn.apizza.net/mock/d9ece8d859722233416fa78ba498d717',
   // baseURL: 'http://139.196.192.241:10201/',
   // baseURL:'http://localhost:8080/jupiter/',
   // baseURL:'http://192.168.1.126:8080/jupiter/',
